@@ -1,6 +1,11 @@
 # Grupa2-IMDb
 Tema: Upravljanje filmskim sadržajem
 
+## Članovi tima:
+* Robert Tomas
+* Mirza Učanbarlić
+* Allen Kovačević
+
 ## Funkcionalnosti:
 * Usluga pretraživanja velike baze filmova po raznim načinima filtriranja
 * Mogućnosti recenzije, kreiranja raznih lista filmova
