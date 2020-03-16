@@ -23,7 +23,7 @@ Sistem za pretragu, te ujedno i gledanje filmova, koji olakšava svim ljubitelji
 * Za razliku od "Gosta", nakon prijave ima uvid u "Watchliste" koje je prije napravio, a koje se čuvaju u bazi
 * Mogućnost pisanja recenzija i dojmova za filmove, kao i njihovo ocjenjivanje
 * Posjeduje svoj profil, koji može modifikovati po svojoj želji(username, avatar, opis profila, itd.)
-* Ima mogućnost pretplate, sa kojom ima opcije gledanja svih filmova koji su dostupni.
+* Ima mogućnost pretplate, sa kojom ima opcije gledanja svih filmova koji su dostupni
 
 #### Administrator:
 * Sve mogućnosti koje imaju "Gost" i "Logovani korisnik", ima i "Administrator", uz još puno dodatnih privilegija.
