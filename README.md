@@ -1,4 +1,4 @@
-# Grupa2-IMDb
+# Grupa2-MovieHub(ex IMDb)
 ## Tema: Upravljanje filmskim sadržajem
 
 ## Članovi tima:
