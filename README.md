@@ -2,9 +2,9 @@
 ## Tema: Upravljanje filmskim sadržajem
 
 ## Članovi tima:
-* Robert Tomas
-* Mirza Učanbarlić
-* Allen Kovačević
+* [Robert Tomas](https://github.com/rtomas1)
+* [Mirza Učanbarlić](https://github.com/tylerwetrust)
+* [Allen Kovačević](https://github.com/AllenKo100)
 
 ## Opis projekta:
 
