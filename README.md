@@ -13,6 +13,6 @@ Tema: Upravljanje filmskim sadržajem
 * Mogućnosti preporuke slučajnog filma koje zadovoljava kriterije koje korisnik zahtjeva
 
 ## Akteri:
+* Administrator
 * Logovani korisnik
 * Gost
-* Administrator
