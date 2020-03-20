@@ -19,11 +19,11 @@ Sistem za pretragu, te ujedno i gledanje filmova, koji olakšava svim ljubitelji
 
 #### Logovani korisnik:
 * Sve mogućnosti koje ima gost, ima i logovani korisnik, sa još nekim pogodnostima
-* Nalazi se na našem sistemu, te ima mogućnost pretplate za gledanje filmova
+* Nalazi se na našem sistemu, te je pretplaćen za gledanje filmova
 * Za razliku od "Gosta", nakon prijave ima uvid u "Watchliste" koje je prije napravio, a koje se čuvaju u bazi
 * Mogućnost pisanja recenzija i dojmova za filmove, kao i njihovo ocjenjivanje
 * Posjeduje svoj profil, koji može modifikovati po svojoj želji(username, avatar, opis profila, itd.)
-* Ima mogućnost pretplate, sa kojom ima opcije gledanja svih filmova koji su dostupni
+* Ima mogućnost biranja vrste pretplate, mjesečne ili godišnje, sa kojom ima opcije gledanja svih filmova koji su dostupni
 
 #### Administrator:
 * Sve mogućnosti koje imaju "Gost" i "Logovani korisnik", ima i "Administrator", uz još puno dodatnih privilegija.
