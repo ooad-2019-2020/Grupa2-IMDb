@@ -719,7 +719,7 @@
 											},
 											"font": "Arial;13;1",
 											"left": 621,
-											"top": 475.5,
+											"top": 487,
 											"width": 183,
 											"height": 13,
 											"text": "Kreiranje korisničkog računa"
@@ -754,7 +754,7 @@
 									],
 									"font": "Arial;13;0",
 									"left": 616,
-									"top": 468.5,
+									"top": 480,
 									"width": 193,
 									"height": 25,
 									"stereotypeLabel": {
@@ -843,30 +843,12 @@
 									"model": {
 										"$ref": "AAAAAAFw+ZTKwVHQSpg="
 									},
-									"subViews": [
-										{
-											"_type": "UMLExtensionPointView",
-											"_id": "AAAAAAFw+bntGoR7ubY=",
-											"_parent": {
-												"$ref": "AAAAAAFw+ZTKxVHc7Sg="
-											},
-											"model": {
-												"$ref": "AAAAAAFw+bnsvIR4wqo="
-											},
-											"font": "Arial;13;0",
-											"left": 581,
-											"top": 503,
-											"width": 263,
-											"height": 13,
-											"text": "Prilikom kreiranja računa",
-											"horizontalAlignment": 0
-										}
-									],
+									"visible": false,
 									"font": "Arial;13;0",
 									"left": 576,
 									"top": 498,
 									"width": 273,
-									"height": 23
+									"height": 10
 								}
 							],
 							"font": "Arial;13;0",
@@ -9146,16 +9128,6 @@
 							"target": {
 								"$ref": "AAAAAAFw+bw6DJcFk3A="
 							}
-						}
-					],
-					"extensionPoints": [
-						{
-							"_type": "UMLExtensionPoint",
-							"_id": "AAAAAAFw+bnsvIR4wqo=",
-							"_parent": {
-								"$ref": "AAAAAAFw+ZTKwVHQSpg="
-							},
-							"name": "Prilikom kreiranja računa"
 						}
 					]
 				},
