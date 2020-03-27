@@ -1018,7 +1018,7 @@
 													"left": 549,
 													"top": 575,
 													"width": 127,
-													"height": 52,
+													"height": 39,
 													"text": "Korisniku se prikazuje izvještaj o neuspješnoj validaciji",
 													"wordWrap": true
 												},
@@ -1054,7 +1054,7 @@
 											"left": 544,
 											"top": 568,
 											"width": 137,
-											"height": 64,
+											"height": 51,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAFxHUffka8qAhw="
 											},
@@ -2686,6 +2686,115 @@
 									"propertyLabel": {
 										"$ref": "AAAAAAFxHVpTBzdb8s0="
 									}
+								},
+								{
+									"_type": "UMLControlNodeView",
+									"_id": "AAAAAAFxHaHCrXUfKdA=",
+									"_parent": {
+										"$ref": "AAAAAAFxHVDjTjZXiyc="
+									},
+									"model": {
+										"$ref": "AAAAAAFxHaHCrHUdFQ0="
+									},
+									"font": "Arial;13;0",
+									"containerChangeable": true,
+									"left": 408,
+									"top": 656,
+									"width": 26,
+									"height": 26
+								},
+								{
+									"_type": "UMLControlFlowView",
+									"_id": "AAAAAAFxHaHbqnUkwg0=",
+									"_parent": {
+										"$ref": "AAAAAAFxHVDjTjZXiyc="
+									},
+									"model": {
+										"$ref": "AAAAAAFxHaHbqnUjdCE="
+									},
+									"subViews": [
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFxHaHbqnUl8Eg=",
+											"_parent": {
+												"$ref": "AAAAAAFxHaHbqnUkwg0="
+											},
+											"model": {
+												"$ref": "AAAAAAFxHaHbqnUjdCE="
+											},
+											"visible": false,
+											"font": "Arial;13;0",
+											"left": 436,
+											"top": 621,
+											"height": 13,
+											"alpha": 1.5707963267948966,
+											"distance": 15,
+											"hostEdge": {
+												"$ref": "AAAAAAFxHaHbqnUkwg0="
+											},
+											"edgePosition": 1
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFxHaHbqnUmdn0=",
+											"_parent": {
+												"$ref": "AAAAAAFxHaHbqnUkwg0="
+											},
+											"model": {
+												"$ref": "AAAAAAFxHaHbqnUjdCE="
+											},
+											"visible": null,
+											"font": "Arial;13;0",
+											"left": 451,
+											"top": 621,
+											"height": 13,
+											"alpha": 1.5707963267948966,
+											"distance": 30,
+											"hostEdge": {
+												"$ref": "AAAAAAFxHaHbqnUkwg0="
+											},
+											"edgePosition": 1
+										},
+										{
+											"_type": "EdgeLabelView",
+											"_id": "AAAAAAFxHaHbqnUnN1Y=",
+											"_parent": {
+												"$ref": "AAAAAAFxHaHbqnUkwg0="
+											},
+											"model": {
+												"$ref": "AAAAAAFxHaHbqnUjdCE="
+											},
+											"visible": false,
+											"font": "Arial;13;0",
+											"left": 407,
+											"top": 622,
+											"height": 13,
+											"alpha": -1.5707963267948966,
+											"distance": 15,
+											"hostEdge": {
+												"$ref": "AAAAAAFxHaHbqnUkwg0="
+											},
+											"edgePosition": 1
+										}
+									],
+									"font": "Arial;13;0",
+									"head": {
+										"$ref": "AAAAAAFxHaHCrXUfKdA="
+									},
+									"tail": {
+										"$ref": "AAAAAAFxHVim0jcbU74="
+									},
+									"points": "422:600;422:656",
+									"showVisibility": true,
+									"nameLabel": {
+										"$ref": "AAAAAAFxHaHbqnUl8Eg="
+									},
+									"stereotypeLabel": {
+										"$ref": "AAAAAAFxHaHbqnUmdn0="
+									},
+									"propertyLabel": {
+										"$ref": "AAAAAAFxHaHbqnUnN1Y="
+									}
 								}
 							]
 						}
@@ -2722,6 +2831,14 @@
 								"$ref": "AAAAAAFxHVDjTjZWEho="
 							},
 							"name": "Po procijeni bira sankciju"
+						},
+						{
+							"_type": "UMLActivityFinalNode",
+							"_id": "AAAAAAFxHaHCrHUdFQ0=",
+							"_parent": {
+								"$ref": "AAAAAAFxHVDjTjZWEho="
+							},
+							"name": "ActivityFinalNode1"
 						}
 					],
 					"edges": [
@@ -2804,6 +2921,19 @@
 							},
 							"target": {
 								"$ref": "AAAAAAFxHVim0TcZiOQ="
+							}
+						},
+						{
+							"_type": "UMLControlFlow",
+							"_id": "AAAAAAFxHaHbqnUjdCE=",
+							"_parent": {
+								"$ref": "AAAAAAFxHVDjTjZWEho="
+							},
+							"source": {
+								"$ref": "AAAAAAFxHVim0TcZiOQ="
+							},
+							"target": {
+								"$ref": "AAAAAAFxHaHCrHUdFQ0="
 							}
 						}
 					],
