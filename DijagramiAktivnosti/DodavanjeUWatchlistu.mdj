@@ -57,7 +57,7 @@
 											"top": 84,
 											"width": 361,
 											"height": 13,
-											"text": "ActivityPartition1",
+											"text": "Korisnik",
 											"verticalAlignment": 3
 										}
 									],
@@ -91,7 +91,7 @@
 											"top": 84,
 											"width": 417,
 											"height": 13,
-											"text": "ActivityPartition2",
+											"text": "Sistem",
 											"verticalAlignment": 3
 										}
 									],
@@ -945,7 +945,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFxHVpV483lwt0="
 							},
-							"name": "ActivityPartition1",
+							"name": "Korisnik",
 							"nodes": [
 								{
 									"_type": "UMLInitialNode",
@@ -963,7 +963,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFxHVpV483lwt0="
 							},
-							"name": "ActivityPartition2"
+							"name": "Sistem"
 						}
 					]
 				}
