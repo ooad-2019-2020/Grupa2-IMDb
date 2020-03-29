@@ -401,7 +401,7 @@
 											"left": 573,
 											"top": 303,
 											"width": 169.06982421875,
-											"height": 26,
+											"height": 13,
 											"text": "Prikaz forme za registraciju",
 											"wordWrap": true
 										},
@@ -437,7 +437,7 @@
 									"left": 568,
 									"top": 296,
 									"width": 179.06982421875,
-									"height": 38,
+									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAFxHQl6FzBt/2c="
 									},
@@ -1402,7 +1402,7 @@
 											"left": 509,
 											"top": 679,
 											"width": 135,
-											"height": 39,
+											"height": 26,
 											"text": "Potvrda da su uneseni podaci validni",
 											"wordWrap": true
 										},
@@ -1438,7 +1438,7 @@
 									"left": 504,
 									"top": 672,
 									"width": 145,
-									"height": 51,
+									"height": 38,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAFxHRAp5zGw2ec="
 									},
@@ -4261,7 +4261,7 @@
 											"top": 767,
 											"width": 226.10986328125,
 											"height": 13,
-											"text": "Korisnik bira opciju pretrage filmova"
+											"text": "Biranje opcije za pretragu filmova"
 										},
 										{
 											"_type": "LabelView",
@@ -4459,8 +4459,8 @@
 											"left": 677,
 											"top": 751,
 											"width": 358.998046875,
-											"height": 26,
-											"text": "Sistem nudi opciju pretrage po imenu i po raznim filterima",
+											"height": 13,
+											"text": "Prikaz opcija za pretragu po imenu i po raznim filterima",
 											"wordWrap": true
 										},
 										{
@@ -4495,7 +4495,7 @@
 									"left": 672,
 									"top": 744,
 									"width": 368.998046875,
-									"height": 38,
+									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAFxHSs0LDVuOS8="
 									},
@@ -4660,7 +4660,7 @@
 											"top": 911,
 											"width": 159,
 											"height": 26,
-											"text": "Korisnik bira način pretrage i unosi podatke",
+											"text": "Biranje načina pretrage i unos podataka",
 											"wordWrap": true
 										},
 										{
@@ -4858,7 +4858,7 @@
 											"top": 1007,
 											"width": 200.1162109375,
 											"height": 13,
-											"text": "Sistem vrši pretragu filma u bazi"
+											"text": "Vršenje pretrage filma u bazi"
 										},
 										{
 											"_type": "LabelView",
@@ -5366,7 +5366,7 @@
 											"top": 1191,
 											"width": 151,
 											"height": 26,
-											"text": "Sistem prikazuje sve informacije o filmu",
+											"text": "Prikaz svih informacija o filmu",
 											"wordWrap": true
 										},
 										{
@@ -5998,7 +5998,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFxHSkieDUfL0Q="
 							},
-							"name": "Korisnik bira opciju pretrage filmova"
+							"name": "Biranje opcije za pretragu filmova"
 						},
 						{
 							"_type": "UMLAction",
@@ -6006,7 +6006,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFxHSkieDUfL0Q="
 							},
-							"name": "Korisnik bira način pretrage i unosi podatke"
+							"name": "Biranje načina pretrage i unos podataka"
 						}
 					]
 				},
@@ -6024,7 +6024,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFxHSlAGDUnqc0="
 							},
-							"name": "Sistem nudi opciju pretrage po imenu i po raznim filterima"
+							"name": "Prikaz opcija za pretragu po imenu i po raznim filterima"
 						},
 						{
 							"_type": "UMLAction",
@@ -6032,7 +6032,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFxHSlAGDUnqc0="
 							},
-							"name": "Sistem vrši pretragu filma u bazi"
+							"name": "Vršenje pretrage filma u bazi"
 						},
 						{
 							"_type": "UMLAction",
@@ -6048,7 +6048,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFxHSlAGDUnqc0="
 							},
-							"name": "Sistem prikazuje sve informacije o filmu"
+							"name": "Prikaz svih informacija o filmu"
 						},
 						{
 							"_type": "UMLAction",

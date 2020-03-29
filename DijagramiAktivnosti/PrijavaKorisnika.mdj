@@ -172,7 +172,7 @@
 													"top": 191,
 													"width": 184.9326171875,
 													"height": 13,
-													"text": "Korisnik bira opciju za prijavu"
+													"text": "Biranje opcije za prijavu"
 												},
 												{
 													"_type": "LabelView",
@@ -825,48 +825,6 @@
 								},
 								{
 									"_type": "UMLControlNodeView",
-									"_id": "AAAAAAFxHUV5qq7Ap9I=",
-									"_parent": {
-										"$ref": "AAAAAAFxHT5kz6312t8="
-									},
-									"model": {
-										"$ref": "AAAAAAFxHUV5qa6+GvI="
-									},
-									"font": "Arial;13;0",
-									"containerChangeable": true,
-									"width": 23,
-									"height": 19
-								},
-								{
-									"_type": "UMLControlNodeView",
-									"_id": "AAAAAAFxHUWH8K7FQdY=",
-									"_parent": {
-										"$ref": "AAAAAAFxHT5kz6312t8="
-									},
-									"model": {
-										"$ref": "AAAAAAFxHUWH8K7DUPc="
-									},
-									"font": "Arial;13;0",
-									"containerChangeable": true,
-									"width": 23,
-									"height": 19
-								},
-								{
-									"_type": "UMLControlNodeView",
-									"_id": "AAAAAAFxHUWieq7KPoU=",
-									"_parent": {
-										"$ref": "AAAAAAFxHT5kz6312t8="
-									},
-									"model": {
-										"$ref": "AAAAAAFxHUWieq7IevY="
-									},
-									"font": "Arial;13;0",
-									"containerChangeable": true,
-									"width": 23,
-									"height": 19
-								},
-								{
-									"_type": "UMLControlNodeView",
 									"_id": "AAAAAAFxHUbP+a70c3U=",
 									"_parent": {
 										"$ref": "AAAAAAFxHT5kz6312t8="
@@ -1021,8 +979,8 @@
 													"left": 549,
 													"top": 575,
 													"width": 127,
-													"height": 52,
-													"text": "Korisniku se prikazuje izvještaj o neuspješnoj validaciji",
+													"height": 39,
+													"text": "Prikaz izvještaja o neuspješnoj validaciji",
 													"wordWrap": true
 												},
 												{
@@ -1057,7 +1015,7 @@
 											"left": 544,
 											"top": 568,
 											"width": 137,
-											"height": 64,
+											"height": 51,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAFxHUffka8qAhw="
 											},
@@ -1774,7 +1732,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFxHT7oQa35Qj0="
 									},
-									"name": "Korisnik bira opciju za prijavu"
+									"name": "Biranje opcije za prijavu"
 								}
 							]
 						},
@@ -1824,7 +1782,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFxHT9WSK4GmKA="
 									},
-									"name": "Korisniku se prikazuje izvještaj o neuspješnoj validaciji"
+									"name": "Prikaz izvještaja o neuspješnoj validaciji"
 								},
 								{
 									"_type": "UMLAction",

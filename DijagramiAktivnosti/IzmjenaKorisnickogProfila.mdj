@@ -165,7 +165,7 @@
 											"top": 375,
 											"width": 199,
 											"height": 26,
-											"text": "Korisnik pristupa meniju za imjenu korisničkog profila",
+											"text": "Pristup meniju za imjenu korisničkog profila",
 											"wordWrap": true
 										},
 										{
@@ -363,7 +363,7 @@
 											"top": 519,
 											"width": 199,
 											"height": 26,
-											"text": "Po želji vrši izmjenu korisničkog profila",
+											"text": "Vršenje izmjena korisničkog profila po želji",
 											"wordWrap": true
 										},
 										{
@@ -561,7 +561,7 @@
 											"top": 527,
 											"width": 200.13525390625,
 											"height": 13,
-											"text": "Sistem spašava promjene u bazi"
+											"text": "Spašavanje promjena u bazi"
 										},
 										{
 											"_type": "LabelView",
@@ -842,7 +842,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFxHU1f2gHKCkM="
 					},
-					"name": "Korisnik pristupa meniju za imjenu korisničkog profila"
+					"name": "Pristup meniju za imjenu korisničkog profila"
 				},
 				{
 					"_type": "UMLAction",
@@ -850,7 +850,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFxHU1f2gHKCkM="
 					},
-					"name": "Po želji vrši izmjenu korisničkog profila"
+					"name": "Vršenje izmjena korisničkog profila po želji"
 				},
 				{
 					"_type": "UMLAction",
@@ -858,7 +858,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFxHU1f2gHKCkM="
 					},
-					"name": "Sistem spašava promjene u bazi"
+					"name": "Spašavanje promjena u bazi"
 				},
 				{
 					"_type": "UMLActivityFinalNode",

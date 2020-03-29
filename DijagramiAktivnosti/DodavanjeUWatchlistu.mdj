@@ -146,7 +146,7 @@
 													"top": 199,
 													"width": 327.2216796875,
 													"height": 13,
-													"text": "Korisnik je pronašao film koji želi dodati u watchlistu"
+													"text": "Pronalazak filma koji se želi dodati u watchlistu"
 												},
 												{
 													"_type": "LabelView",
@@ -244,7 +244,7 @@
 													"top": 295,
 													"width": 311,
 													"height": 13,
-													"text": "Pravi novu ili uređuje postojeću watchlistu"
+													"text": "Pravljenje nove ili uređivanje postojeće watchliste"
 												},
 												{
 													"_type": "LabelView",
@@ -559,7 +559,7 @@
 													"top": 303,
 													"width": 334,
 													"height": 13,
-													"text": "Sistem spašava promjene u bazi"
+													"text": "Spašavanje promjena u bazi"
 												},
 												{
 													"_type": "LabelView",
@@ -810,7 +810,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFxHVpV483lwt0="
 							},
-							"name": "Korisnik je pronašao film koji želi dodati u watchlistu"
+							"name": "Pronalazak filma koji se želi dodati u watchlistu"
 						},
 						{
 							"_type": "UMLAction",
@@ -818,7 +818,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFxHVpV483lwt0="
 							},
-							"name": "Pravi novu ili uređuje postojeću watchlistu"
+							"name": "Pravljenje nove ili uređivanje postojeće watchliste"
 						},
 						{
 							"_type": "UMLInitialNode",
@@ -842,7 +842,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFxHVpV483lwt0="
 							},
-							"name": "Sistem spašava promjene u bazi"
+							"name": "Spašavanje promjena u bazi"
 						}
 					],
 					"edges": [
