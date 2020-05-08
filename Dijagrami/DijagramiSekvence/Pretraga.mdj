@@ -349,7 +349,7 @@
 														"$ref": "AAAAAAFx9jCb1gfhtXs="
 													},
 													"edgePosition": 1,
-													"text": "1 : pretraga"
+													"text": "1 : pretraga()"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -934,7 +934,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFx9i2+xAeQLMU="
 									},
-									"name": "pretraga",
+									"name": "pretraga()",
 									"source": {
 										"$ref": "AAAAAAFx9i6VNgehUnc="
 									},
