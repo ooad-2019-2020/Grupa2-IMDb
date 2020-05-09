@@ -712,7 +712,7 @@
 														"$ref": "AAAAAAFx9mof+CL30iI="
 													},
 													"edgePosition": 1,
-													"text": "3 : film()"
+													"text": "3 : film"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -1046,7 +1046,7 @@
 														"$ref": "AAAAAAFx9mqypiMOV7Y="
 													},
 													"edgePosition": 1,
-													"text": "6 : isteklaPretplata()"
+													"text": "6 : isteklaPretplata"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -1166,7 +1166,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFx9mKHFSI4npQ="
 									},
-									"name": "film()",
+									"name": "film",
 									"source": {
 										"$ref": "AAAAAAFx9mPxJSJsU7U="
 									},
@@ -1209,7 +1209,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFx9mKHFSI4npQ="
 									},
-									"name": "isteklaPretplata()",
+									"name": "isteklaPretplata",
 									"source": {
 										"$ref": "AAAAAAFx9mPxJSJsU7U="
 									},
@@ -1285,7 +1285,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFx9mKHFSI3930="
 							},
-							"name": "Role1"
+							"name": "Role1",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -1293,7 +1294,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFx9mKHFSI3930="
 							},
-							"name": "Role2"
+							"name": "Role2",
+							"type": ""
 						}
 					]
 				}

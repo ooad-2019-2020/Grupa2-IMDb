@@ -717,7 +717,7 @@
 														"$ref": "AAAAAAFx9lhGpOTKHSA="
 													},
 													"edgePosition": 1,
-													"text": "3 : podaciOFilmu()"
+													"text": "3 : podaciOFilmu"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -842,7 +842,7 @@
 														"$ref": "AAAAAAFx9lqCyOUU9/8="
 													},
 													"edgePosition": 1,
-													"text": "4 : neuspjesanProlanazak()"
+													"text": "4 : neuspjesanProlanazak"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -962,7 +962,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFx9i2+xAeQLMU="
 									},
-									"name": "podaciOFilmu()",
+									"name": "podaciOFilmu",
 									"source": {
 										"$ref": "AAAAAAFx9i62PAfBsRA="
 									},
@@ -977,7 +977,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFx9i2+xAeQLMU="
 									},
-									"name": "neuspjesanProlanazak()",
+									"name": "neuspjesanProlanazak",
 									"source": {
 										"$ref": "AAAAAAFx9i62PAfBsRA="
 									},
