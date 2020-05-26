@@ -12,6 +12,8 @@ using MovieHub.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MovieHub.Models;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace MovieHub
 {
@@ -29,9 +31,18 @@ namespace MovieHub
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                    Configuration.GetConnectionString("DBConnection")));
+            services.AddDbContext<MovieDBContext>(options => 
+                options.UseSqlServer(Configuration.GetConnectionString("DbConnection")));
+
+
+            services.AddDefaultIdentity<RegistrovaniKorisnik>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            
+           
+            /*services.AddIdentity<RegistrovaniKorisnik, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<ApplicationDbContext>();
+            */
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
