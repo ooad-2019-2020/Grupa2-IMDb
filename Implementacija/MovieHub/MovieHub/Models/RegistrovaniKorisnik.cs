@@ -16,5 +16,7 @@ namespace MovieHub.Models
         public DateTime RokPretplate { get; set; }
 
         public IList<Watchlist> Watchlists { get; set; }
+
+        public virtual ICollection<OmiljeniFilmovi> OmiljeniFilmovi { get; set; }
     }
 }
