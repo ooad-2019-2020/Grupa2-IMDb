@@ -14,5 +14,7 @@ namespace MovieHub.Models
         public DateTime DatumRodjenja { get; set; }
         public string SlikaProfila { get; set; }
         public DateTime RokPretplate { get; set; }
+
+        public IList<Watchlist> Watchlists { get; set; }
     }
 }

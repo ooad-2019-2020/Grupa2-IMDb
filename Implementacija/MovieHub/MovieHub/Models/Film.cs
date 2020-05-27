@@ -24,6 +24,7 @@ namespace MovieHub.Models
         public string Reziser { get; set; }
         public string Poster { get; set; }
         public virtual ICollection<FilmZanr> FilmZanr { get; set; }
+        public virtual ICollection<WatchlistFilm> WatchlistFilm { get; set; }
 
 
 }

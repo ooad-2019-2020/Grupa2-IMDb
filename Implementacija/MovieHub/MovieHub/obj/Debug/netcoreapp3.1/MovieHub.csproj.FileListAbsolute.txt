@@ -224,3 +224,13 @@ C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj
 C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\Film\Edit.cshtml.g.cs
 C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\Film\Index.cshtml.g.cs
 C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_IndexLayout.cshtml.g.cs
+C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\Watchlist\Create.cshtml.g.cs
+C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\Watchlist\Delete.cshtml.g.cs
+C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\Watchlist\Details.cshtml.g.cs
+C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\Watchlist\Edit.cshtml.g.cs
+C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\Watchlist\Index.cshtml.g.cs
+C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\WatchlistFilms\Create.cshtml.g.cs
+C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\WatchlistFilms\Delete.cshtml.g.cs
+C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\WatchlistFilms\Details.cshtml.g.cs
+C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\WatchlistFilms\Edit.cshtml.g.cs
+C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\WatchlistFilms\Index.cshtml.g.cs
