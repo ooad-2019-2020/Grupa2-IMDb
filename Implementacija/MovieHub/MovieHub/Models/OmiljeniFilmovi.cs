@@ -9,7 +9,7 @@ namespace MovieHub.Models
     {
         public int OmiljeniFilmoviID { get; set; }
         public int FilmID { get; set; }
-        public int RegistrovaniKorisnikID { get; set; }
+        public int UserID { get; set; }
 
         public virtual Film Film { get; set; }
         public virtual RegistrovaniKorisnik RegistrovaniKorisnik { get; set; }

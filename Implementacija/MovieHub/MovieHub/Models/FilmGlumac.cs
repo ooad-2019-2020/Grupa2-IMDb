@@ -7,7 +7,7 @@ namespace MovieHub.Models
 {
     public class FilmGlumac
     {
-        public int FilmZanrID { get; set; }
+        public int FilmGlumacID { get; set; }
         public int FilmID { get; set; }
         public int GlumacId { get; set; }
 
