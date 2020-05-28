@@ -19,12 +19,21 @@ namespace MovieHub.Controllers
         }
 
         // GET: Film
-        public async Task<IActionResult> Index(string sortOrder, string searchString)
+        public async Task<IActionResult> Index(string sortOrder, string currentFilter, string searchString, int? pageNumber)
         {
             ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
             ViewData["CurrentFilter"] = searchString;
-
+           
+            if (searchString != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+            ViewData["CurrentFilter"] = searchString;
             var movies = from s in _context.Film
                            select s;
             if (!String.IsNullOrEmpty(searchString))
@@ -47,7 +56,8 @@ namespace MovieHub.Controllers
                     movies = movies.OrderBy(m => m.Naziv);
                     break;
             }
-            return View(await movies.AsNoTracking().ToListAsync());
+            int pageSize = 9;
+            return View(await PaginatedList<Film>.CreateAsync(movies.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
 
         // GET: Film/Details/5
@@ -79,7 +89,7 @@ namespace MovieHub.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Naziv,Ocjena,Trailer,Opis,Reziser,Poster")] Film film)
+        public async Task<IActionResult> Create([Bind("Naziv,Ocjena,Trailer,Opis,Reziser,Poster,DatumIzlaska")] Film film)
         {
             if (ModelState.IsValid)
             {
@@ -111,7 +121,7 @@ namespace MovieHub.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Naziv,Ocjena,Trailer,Opis,Reziser,Poster")] Film film)
+        public async Task<IActionResult> Edit(int id, [Bind("Naziv,Ocjena,Trailer,Opis,Reziser,Poster,DatumIzlaska")] Film film)
         {
             if (id != film.FilmID)
             {

@@ -23,6 +23,9 @@ namespace MovieHub.Models
         [StringLength(50)]
         public string Reziser { get; set; }
         public string Poster { get; set; }
+        [Display(Name = "Datum izlaska")]
+        [DataType(DataType.Date)]
+        public DateTime DatumIzlaska { get; set; }
         public virtual ICollection<FilmZanr> FilmZanr { get; set; }
         public virtual ICollection<WatchlistFilm> WatchlistFilm { get; set; }
 
