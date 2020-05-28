@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" rel="stylesheet">
 
     <!-- CSS -->
-    <!--<link rel="stylesheet" href="css/bootstrap-reboot.min.css">-->
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="~/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="~/css/owl.carousel.min.css">
     <link rel="stylesheet" href="~/css/jquery.mCustomScrollbar.min.css">
@@ -52,8 +52,8 @@
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-3" type="search" placeholder="Traži" aria-label="Search">
+                    <form class="form-inline" asp-controller="Film" asp-action="Index" method="get">
+                        <input class="form-control mr-sm-3" type="search" placeholder="Traži" value="@ViewData["currentFilter"]" name="SearchString" aria-label="Search">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Traži</button>
                     </form>
                 </div>

@@ -19,9 +19,35 @@ namespace MovieHub.Controllers
         }
 
         // GET: Film
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder, string searchString)
         {
-            return View(await _context.Film.ToListAsync());
+            ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
+            ViewData["CurrentFilter"] = searchString;
+
+            var movies = from s in _context.Film
+                           select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                 movies = movies.Where(s => s.Naziv.Contains(searchString));
+   
+            }
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    movies = movies.OrderByDescending(m => m.Naziv);
+                    break;
+                case "Date":
+                   // movies = movies.OrderBy(m => m.D);
+                    break;
+                case "date_desc":
+                   // movies = movies.OrderByDescending(s => s.EnrollmentDate);
+                    break;
+                default:
+                    movies = movies.OrderBy(m => m.Naziv);
+                    break;
+            }
+            return View(await movies.AsNoTracking().ToListAsync());
         }
 
         // GET: Film/Details/5

@@ -78,1154 +78,212 @@
     </tbody>
 </table>
     -->
-<!--preloading-->
-<!-- home -->
-<section class="home">
-    <!-- home bg -->
-    <div class="owl-carousel home__bg">
-        <div class="item home__cover" data-bg="img/home/home__bg.jpg"></div>
-        <div class="item home__cover" data-bg="img/home/home__bg2.jpg"></div>
-        <div class="item home__cover" data-bg="img/home/home__bg3.jpg"></div>
-        <div class="item home__cover" data-bg="img/home/home__bg4.jpg"></div>
-    </div>
-    <!-- end home bg -->
-
+<section class="section section--first section--bg" data-bg="img/section/section.jpg">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="home__title"><b>NEW ITEMS</b> OF THIS SEASON</h1>
-
-                <button class="home__nav home__nav--prev" type="button">
-                    <i class="icon ion-ios-arrow-round-back"></i>
-                </button>
-                <button class="home__nav home__nav--next" type="button">
-                    <i class="icon ion-ios-arrow-round-forward"></i>
-                </button>
-            </div>
-
-            <div class="col-12">
-                <div class="owl-carousel home__carousel">
-                    <div class="item">
-                        <!-- card -->
-                        <div class="card card--big">
-                            <div class="card__cover">
-                                <img src="img/covers/cover.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Action</a>
-                                    <a href="#">Triler</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
-
-                    <div class="item">
-                        <!-- card -->
-                        <div class="card card--big">
-                            <div class="card__cover">
-                                <img src="img/covers/cover2.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Benched</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Comedy</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
-
-                    <div class="item">
-                        <!-- card -->
-                        <div class="card card--big">
-                            <div class="card__cover">
-                                <img src="img/covers/cover3.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Whitney</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Romance</a>
-                                    <a href="#">Drama</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
-
-                    <div class="item">
-                        <!-- card -->
-                        <div class="card card--big">
-                            <div class="card__cover">
-                                <img src="img/covers/cover4.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Blindspotting</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Comedy</a>
-                                    <a href="#">Drama</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
+                <div class="section__wrap">
+                    <!-- section title -->
+                    <h2 class="section__title">Filmovi</h2>
+                    <!-- end section title -->
+                    <!-- breadcrumb -->
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb__item"><a href="#">Home</a></li>
+                        <li class="breadcrumb__item breadcrumb__item--active">Catalog list</li>
+                    </ul>
+                    <!-- end breadcrumb -->
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- end home -->
-<!-- content -->
-<section class="content">
-    <div class="content__head">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- content title -->
-                    <h2 class="content__title">New items</h2>
-                    <!-- end content title -->
-                    <!-- content tabs nav -->
-                    <ul class="nav nav-tabs content__tabs" id="content__tabs" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">NEW RELEASES</a>
-                        </li>
+<!-- end page title -->
+<!-- filter -->
+<div class="filter">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="filter__content">
+                    <div class="filter__items">
+                        <!-- filter item -->
+                        <div class="filter__item" id="filter__genre">
+                            <span class="filter__item-label">GENRE:</span>
 
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">MOVIES</a>
-                        </li>
+                            <div class="filter__item-btn dropdown-toggle" role="navigation" id="filter-genre" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <input type="button" value="Action/Adventure">
+                                <span></span>
+                            </div>
 
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false">TV SERIES</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tab-4" role="tab" aria-controls="tab-4" aria-selected="false">CARTOONS</a>
-                        </li>
-                    </ul>
-                    <!-- end content tabs nav -->
-                    <!-- content mobile tabs nav -->
-                    <div class="content__mobile-tabs" id="content__mobile-tabs">
-                        <div class="content__mobile-tabs-btn dropdown-toggle" role="navigation" id="mobile-tabs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <input type="button" value="New items">
-                            <span></span>
-                        </div>
-
-                        <div class="content__mobile-tabs-menu dropdown-menu" aria-labelledby="mobile-tabs">
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li class="nav-item"><a class="nav-link active" id="1-tab" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">NEW RELEASES</a></li>
-
-                                <li class="nav-item"><a class="nav-link" id="2-tab" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">MOVIES</a></li>
-
-                                <li class="nav-item"><a class="nav-link" id="3-tab" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false">TV SERIES</a></li>
-
-                                <li class="nav-item"><a class="nav-link" id="4-tab" data-toggle="tab" href="#tab-4" role="tab" aria-controls="tab-4" aria-selected="false">CARTOONS</a></li>
+                            <ul class="filter__item-menu dropdown-menu scrollbar-dropdown" aria-labelledby="filter-genre">
+                                <li>Action/Adventure</li>
+                                <li>Animals</li>
+                                <li>Animation</li>
+                                <li>Biography</li>
+                                <li>Comedy</li>
+                                <li>Cooking</li>
+                                <li>Dance</li>
+                                <li>Documentary</li>
+                                <li>Drama</li>
+                                <li>Education</li>
+                                <li>Entertainment</li>
+                                <li>Family</li>
+                                <li>Fantasy</li>
+                                <li>History</li>
+                                <li>Horror</li>
+                                <li>Independent</li>
+                                <li>International</li>
+                                <li>Kids</li>
+                                <li>Kids & Family</li>
+                                <li>Medical</li>
+                                <li>Military/War</li>
+                                <li>Music</li>
+                                <li>Musical</li>
+                                <li>Mystery/Crime</li>
+                                <li>Nature</li>
+                                <li>Paranormal</li>
+                                <li>Politics</li>
+                                <li>Racing</li>
+                                <li>Romance</li>
+                                <li>Sci-Fi/Horror</li>
+                                <li>Science</li>
+                                <li>Science Fiction</li>
+                                <li>Science/Nature</li>
+                                <li>Spanish</li>
+                                <li>Travel</li>
+                                <li>Western</li>
                             </ul>
                         </div>
+                        <!-- end filter item -->
+                        <!-- filter item -->
+                        <div class="filter__item" id="filter__quality">
+                            <span class="filter__item-label">QUALITY:</span>
+
+                            <div class="filter__item-btn dropdown-toggle" role="navigation" id="filter-quality" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <input type="button" value="HD 1080">
+                                <span></span>
+                            </div>
+
+                            <ul class="filter__item-menu dropdown-menu scrollbar-dropdown" aria-labelledby="filter-quality">
+                                <li>HD 1080</li>
+                                <li>HD 720</li>
+                                <li>DVD</li>
+                                <li>TS</li>
+                            </ul>
+                        </div>
+                        <!-- end filter item -->
+                        <!-- filter item -->
+                        <div class="filter__item" id="filter__rate">
+                            <span class="filter__item-label">IMBd:</span>
+
+                            <div class="filter__item-btn dropdown-toggle" role="button" id="filter-rate" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="filter__range">
+                                    <div id="filter__imbd-start"></div>
+                                    <div id="filter__imbd-end"></div>
+                                </div>
+                                <span></span>
+                            </div>
+
+                            <div class="filter__item-menu filter__item-menu--range dropdown-menu" aria-labelledby="filter-rate">
+                                <div id="filter__imbd"></div>
+                            </div>
+                        </div>
+                        <!-- end filter item -->
+                        <!-- filter item -->
+                        <div class="filter__item" id="filter__year">
+                            <span class="filter__item-label">RELEASE YEAR:</span>
+
+                            <div class="filter__item-btn dropdown-toggle" role="button" id="filter-year" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="filter__range">
+                                    <div id="filter__years-start"></div>
+                                    <div id="filter__years-end"></div>
+                                </div>
+                                <span></span>
+                            </div>
+
+                            <div class="filter__item-menu filter__item-menu--range dropdown-menu" aria-labelledby="filter-year">
+                                <div id="filter__years"></div>
+                            </div>
+                        </div>
+                        <!-- end filter item -->
                     </div>
-                    <!-- end content mobile tabs nav -->
+
+                    <!-- filter btn -->
+                    <button class="filter__btn" type="button">apply filter</button>
+                    <!-- end filter btn -->
                 </div>
             </div>
         </div>
     </div>
-
+</div>
+<!-- end filter -->
+<!-- catalog -->
+<div class="catalog">
     <div class="container">
-        <!-- content tabs -->
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="1-tab">
-                <div class="row">
-                    <!-- card -->
-                    <div class="col-6 col-sm-12 col-lg-6">
-                        <div class="card card--list">
-                            <div class="row">
-                                <div class="col-12 col-sm-4">
-                                    <div class="card__cover">
-                                        <img src="img/covers/cover.jpg" alt="">
-                                        <a href="#" class="card__play">
-                                            <i class="icon ion-ios-play"></i>
-                                        </a>
-                                    </div>
+        <div class="row">
+            <!-- card -->
+            @foreach (var item in Model)
+            {
+            <div class="col-6 col-sm-12 col-lg-6">
+                <div class="card card--list">
+                    <div class="row">
+                        <div class="col-12 col-sm-4">
+                            <div class="card__cover">
+                                <img src=@Html.DisplayFor(modelItem => item.Poster) alt="">
+                                <a asp-action="Details" asp-route-id="@item.FilmID" class="card__play">
+                                    <i class="icon ion-ios-play"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-8">
+                            <div class="card__content">
+                                <h3 class="card__title"><a asp-action="Details" asp-route-id="@item.FilmID">@Html.DisplayFor(modelItem => item.Naziv)</a></h3>
+                                <span class="card__category">
+                                    <a href="#">Action</a>
+                                    <a href="#">Triler</a>
+                                </span>
+
+                                <div class="card__wrap">
+                                    <span class="card__rate"><i class="icon ion-ios-star"></i>>@Html.DisplayFor(modelItem => item.Ocjena)</span>
+
+                                    <ul class="card__list">
+                                        <li>HD</li>
+                                        <li>16+</li>
+                                    </ul>
                                 </div>
 
-                                <div class="col-12 col-sm-8">
-                                    <div class="card__content">
-                                        <h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
-                                        <span class="card__category">
-                                            <a href="#">Action</a>
-                                            <a href="#">Triler</a>
-                                        </span>
-
-                                        <div class="card__wrap">
-                                            <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
-
-                                            <ul class="card__list">
-                                                <li>HD</li>
-                                                <li>16+</li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="card__description">
-                                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                                        </div>
-                                    </div>
+                                <div class="card__description">
+                                    <p>@Html.DisplayFor(modelItem => item.Opis)</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-12 col-lg-6">
-                        <div class="card card--list">
-                            <div class="row">
-                                <div class="col-12 col-sm-4">
-                                    <div class="card__cover">
-                                        <img src="img/covers/cover2.jpg" alt="">
-                                        <a href="#" class="card__play">
-                                            <i class="icon ion-ios-play"></i>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-sm-8">
-                                    <div class="card__content">
-                                        <h3 class="card__title"><a href="#">Benched</a></h3>
-                                        <span class="card__category">
-                                            <a href="#">Comedy</a>
-                                        </span>
-
-                                        <div class="card__wrap">
-                                            <span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
-
-                                            <ul class="card__list">
-                                                <li>HD</li>
-                                                <li>16+</li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="card__description">
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-12 col-lg-6">
-                        <div class="card card--list">
-                            <div class="row">
-                                <div class="col-12 col-sm-4">
-                                    <div class="card__cover">
-                                        <img src="img/covers/cover3.jpg" alt="">
-                                        <a href="#" class="card__play">
-                                            <i class="icon ion-ios-play"></i>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-sm-8">
-                                    <div class="card__content">
-                                        <h3 class="card__title"><a href="#">Whitney</a></h3>
-                                        <span class="card__category">
-                                            <a href="#">Romance</a>
-                                            <a href="#">Drama</a>
-                                            <a href="#">Music</a>
-                                        </span>
-
-                                        <div class="card__wrap">
-                                            <span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
-
-                                            <ul class="card__list">
-                                                <li>HD</li>
-                                                <li>16+</li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="card__description">
-                                            <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-12 col-lg-6">
-                        <div class="card card--list">
-                            <div class="row">
-                                <div class="col-12 col-sm-4">
-                                    <div class="card__cover">
-                                        <img src="img/covers/cover4.jpg" alt="">
-                                        <a href="#" class="card__play">
-                                            <i class="icon ion-ios-play"></i>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-sm-8">
-                                    <div class="card__content">
-                                        <h3 class="card__title"><a href="#">Blindspotting</a></h3>
-                                        <span class="card__category">
-                                            <a href="#">Comedy</a>
-                                            <a href="#">Drama</a>
-                                        </span>
-
-                                        <div class="card__wrap">
-                                            <span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
-
-                                            <ul class="card__list">
-                                                <li>HD</li>
-                                                <li>16+</li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="card__description">
-                                            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-12 col-lg-6">
-                        <div class="card card--list">
-                            <div class="row">
-                                <div class="col-12 col-sm-4">
-                                    <div class="card__cover">
-                                        <img src="img/covers/cover5.jpg" alt="">
-                                        <a href="#" class="card__play">
-                                            <i class="icon ion-ios-play"></i>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-sm-8">
-                                    <div class="card__content">
-                                        <h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
-                                        <span class="card__category">
-                                            <a href="#">Action</a>
-                                            <a href="#">Triler</a>
-                                        </span>
-
-                                        <div class="card__wrap">
-                                            <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
-
-                                            <ul class="card__list">
-                                                <li>HD</li>
-                                                <li>16+</li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="card__description">
-                                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-12 col-lg-6">
-                        <div class="card card--list">
-                            <div class="row">
-                                <div class="col-12 col-sm-4">
-                                    <div class="card__cover">
-                                        <img src="img/covers/cover6.jpg" alt="">
-                                        <a href="#" class="card__play">
-                                            <i class="icon ion-ios-play"></i>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-sm-8">
-                                    <div class="card__content">
-                                        <h3 class="card__title"><a href="#">Benched</a></h3>
-                                        <span class="card__category">
-                                            <a href="#">Comedy</a>
-                                        </span>
-
-                                        <div class="card__wrap">
-                                            <span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
-
-                                            <ul class="card__list">
-                                                <li>HD</li>
-                                                <li>16+</li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="card__description">
-                                            <p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
                 </div>
             </div>
-
-            <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="2-tab">
-                <div class="row">
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Action</a>
-                                    <a href="#">Triler</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover2.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Benched</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Comedy</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover3.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Whitney</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Romance</a>
-                                    <a href="#">Drama</a>
-                                    <a href="#">Music</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover4.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Blindspotting</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Comedy</a>
-                                    <a href="#">Drama</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover5.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Action</a>
-                                    <a href="#">Triler</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover6.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Benched</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Comedy</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover6.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Whitney</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Romance</a>
-                                    <a href="#">Drama</a>
-                                    <a href="#">Music</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover5.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Blindspotting</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Comedy</a>
-                                    <a href="#">Drama</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover4.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Action</a>
-                                    <a href="#">Triler</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover3.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Benched</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Comedy</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover2.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Whitney</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Romance</a>
-                                    <a href="#">Drama</a>
-                                    <a href="#">Music</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Blindspotting</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Comedy</a>
-                                    <a href="#">Drama</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                </div>
+            }
+            <!-- end card -->
+           
+            <!-- end card -->
+            <!-- paginator -->
+            <div class="col-12">
+                <ul class="paginator paginator--list">
+                    <li class="paginator__item paginator__item--prev">
+                        <a href="#"><i class="icon ion-ios-arrow-back"></i></a>
+                    </li>
+                    <li class="paginator__item"><a href="#">1</a></li>
+                    <li class="paginator__item paginator__item--active"><a href="#">2</a></li>
+                    <li class="paginator__item"><a href="#">3</a></li>
+                    <li class="paginator__item"><a href="#">4</a></li>
+                    <li class="paginator__item paginator__item--next">
+                        <a href="#"><i class="icon ion-ios-arrow-forward"></i></a>
+                    </li>
+                </ul>
             </div>
-
-            <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="3-tab">
-                <div class="row">
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover2.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Action</a>
-                                    <a href="#">Triler</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Benched</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Comedy</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover4.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Whitney</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Romance</a>
-                                    <a href="#">Drama</a>
-                                    <a href="#">Music</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover3.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Blindspotting</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Comedy</a>
-                                    <a href="#">Drama</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover6.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Action</a>
-                                    <a href="#">Triler</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover5.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Benched</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Comedy</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover5.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Whitney</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Romance</a>
-                                    <a href="#">Drama</a>
-                                    <a href="#">Music</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover6.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Blindspotting</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Comedy</a>
-                                    <a href="#">Drama</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover3.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Action</a>
-                                    <a href="#">Triler</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover4.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Benched</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Comedy</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Whitney</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Romance</a>
-                                    <a href="#">Drama</a>
-                                    <a href="#">Music</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover2.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Blindspotting</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Comedy</a>
-                                    <a href="#">Drama</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                </div>
-            </div>
-
-            <div class="tab-pane fade" id="tab-4" role="tabpanel" aria-labelledby="4-tab">
-                <div class="row">
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Action</a>
-                                    <a href="#">Triler</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover3.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Benched</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Comedy</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover2.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Whitney</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Romance</a>
-                                    <a href="#">Drama</a>
-                                    <a href="#">Music</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover6.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Blindspotting</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Comedy</a>
-                                    <a href="#">Drama</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover4.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Action</a>
-                                    <a href="#">Triler</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover5.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Benched</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Comedy</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover6.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Whitney</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Romance</a>
-                                    <a href="#">Drama</a>
-                                    <a href="#">Music</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover5.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Blindspotting</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Comedy</a>
-                                    <a href="#">Drama</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover4.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Action</a>
-                                    <a href="#">Triler</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover3.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Benched</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Comedy</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover2.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Whitney</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Romance</a>
-                                    <a href="#">Drama</a>
-                                    <a href="#">Music</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="img/covers/cover.jpg" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
-                            </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">Blindspotting</a></h3>
-                                <span class="card__category">
-                                    <a href="#">Comedy</a>
-                                    <a href="#">Drama</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                </div>
-            </div>
+            <!-- end paginator -->
         </div>
-        <!-- end content tabs -->
     </div>
-</section>
-<!-- end content -->
+</div>
+<!-- end catalog -->
 <!-- expected premiere -->
 <section class="section section--bg" data-bg="img/section/section.jpg">
     <div class="container">
@@ -1239,7 +297,7 @@
             <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
                 <div class="card">
                     <div class="card__cover">
-                        <img src="img/covers/cover.jpg" alt="">
+                        <img src="~/img/covers/cover.jpg" alt="">
                         <a href="#" class="card__play">
                             <i class="icon ion-ios-play"></i>
                         </a>
@@ -1363,66 +421,6 @@
     </div>
 </section>
 <!-- end expected premiere -->
-<!-- partners -->
-<section class="section">
-    <div class="container">
-        <div class="row">
-            <!-- section title -->
-            <div class="col-12">
-                <h2 class="section__title section__title--no-margin">Our Partners</h2>
-            </div>
-            <!-- end section title -->
-            <!-- section text -->
-            <div class="col-12">
-                <p class="section__text section__text--last-with-margin">It is a long <b>established</b> fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.</p>
-            </div>
-            <!-- end section text -->
-            <!-- partner -->
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                <a href="#" class="partner">
-                    <img src="img/partners/themeforest-light-background.png" alt="" class="partner__img">
-                </a>
-            </div>
-            <!-- end partner -->
-            <!-- partner -->
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                <a href="#" class="partner">
-                    <img src="img/partners/audiojungle-light-background.png" alt="" class="partner__img">
-                </a>
-            </div>
-            <!-- end partner -->
-            <!-- partner -->
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                <a href="#" class="partner">
-                    <img src="img/partners/codecanyon-light-background.png" alt="" class="partner__img">
-                </a>
-            </div>
-            <!-- end partner -->
-            <!-- partner -->
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                <a href="#" class="partner">
-                    <img src="img/partners/photodune-light-background.png" alt="" class="partner__img">
-                </a>
-            </div>
-            <!-- end partner -->
-            <!-- partner -->
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                <a href="#" class="partner">
-                    <img src="img/partners/activeden-light-background.png" alt="" class="partner__img">
-                </a>
-            </div>
-            <!-- end partner -->
-            <!-- partner -->
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                <a href="#" class="partner">
-                    <img src="img/partners/3docean-light-background.png" alt="" class="partner__img">
-                </a>
-            </div>
-            <!-- end partner -->
-        </div>
-    </div>
-</section>
-<!-- end partners -->
 <!-- footer -->
 <footer class="footer">
     <div class="container">
@@ -1488,16 +486,17 @@
 </footer>
 <!-- end footer -->
 <!-- JS -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.mousewheel.min.js"></script>
-<script src="js/jquery.mCustomScrollbar.min.js"></script>
-<script src="js/wNumb.js"></script>
-<script src="js/nouislider.min.js"></script>
-<script src="js/plyr.min.js"></script>
-<script src="js/jquery.morelines.min.js"></script>
-<script src="js/photoswipe.min.js"></script>
-<script src="js/photoswipe-ui-default.min.js"></script>
-<script src="js/main.js"></script>
+<script src="~/js/jquery-3.3.1.min.js"></script>
+<script src="~/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/owl.carousel.min.js"></script>
+<script src="~/js/jquery.mousewheel.min.js"></script>
+<script src="~/js/jquery.mCustomScrollbar.min.js"></script>
+<script src="~/js/wNumb.js"></script>
+<script src="~/js/nouislider.min.js"></script>
+<script src="~/js/plyr.min.js"></script>
+<script src="~/js/jquery.morelines.min.js"></script>
+<script src="~/js/photoswipe.min.js"></script>
+<script src="~/js/photoswipe-ui-default.min.js"></script>
+<script src="~/js/main.js"></script>
+
 
