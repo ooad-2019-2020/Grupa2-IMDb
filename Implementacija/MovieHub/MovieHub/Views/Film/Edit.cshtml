@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutClean.cshtml";
 }
 
 <h1>Edit</h1>
@@ -47,9 +48,37 @@
                     </div>
                     <span asp-validation-for="DatumIzlaska" class="text-danger"></span>
                 </div>
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <table>
+                            <tr>
+                                @{
+                                    int cnt = 0;
+                                    List<FilmZanrData> zanrovi = ViewBag.Zanrovi;
+
+                                    foreach (var zanr in zanrovi)
+                                    {
+                                        if (cnt++ % 3 == 0)
+                                        {
+                                        @:</tr><tr>
+                                        }
+                                        @:<td>
+                                            <input type="checkbox"
+                                                   name="odabraniZanrovi"
+                                                   value="@zanr.ZanrID"
+                                                   @(Html.Raw(zanr.Dodijeljen ? "checked=\"checked\"" : "")) />
+                                            @zanr.ZanrID @:  @zanr.Naziv
+                                        @:</td>
+                                    }
+                                @:</tr>
+                                }
+                            </table>
+                        </div>
+                    </div>
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            
+            </form>
     </div>
 </div>
 

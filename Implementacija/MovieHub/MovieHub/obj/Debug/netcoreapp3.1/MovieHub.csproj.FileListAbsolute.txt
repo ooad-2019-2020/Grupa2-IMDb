@@ -223,7 +223,6 @@ C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj
 C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\Film\Details.cshtml.g.cs
 C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\Film\Edit.cshtml.g.cs
 C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\Film\Index.cshtml.g.cs
-C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_IndexLayout.cshtml.g.cs
 C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\Watchlist\Create.cshtml.g.cs
 C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\Watchlist\Delete.cshtml.g.cs
 C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\Watchlist\Details.cshtml.g.cs
@@ -244,3 +243,9 @@ C:\Users\Robert\Desktop\OOAD\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\De
 C:\Users\Robert\Desktop\OOAD\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\MovieHub.RazorAssemblyInfo.cs
 C:\Users\Robert\Desktop\OOAD\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\MovieHub.dll
 C:\Users\Robert\Desktop\OOAD\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\MovieHub.pdb
+C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutClean.cshtml.g.cs
+C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\Zanr\Create.cshtml.g.cs
+C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\Zanr\Delete.cshtml.g.cs
+C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\Zanr\Details.cshtml.g.cs
+C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\Zanr\Edit.cshtml.g.cs
+C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Views\Zanr\Index.cshtml.g.cs

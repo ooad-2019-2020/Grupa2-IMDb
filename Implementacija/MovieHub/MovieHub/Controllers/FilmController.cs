@@ -19,11 +19,11 @@ namespace MovieHub.Controllers
         }
 
         // GET: Film
-        public async Task<IActionResult> Index(string sortOrder, string currentFilter, string searchString, int? pageNumber)
+        public async Task<IActionResult> Index(string sortOrder, string currentSearch, string searchString, int? pageNumber)
         {
             ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
-            ViewData["CurrentFilter"] = searchString;
+            ViewData["CurrentSearch"] = searchString;
            
             if (searchString != null)
             {
@@ -31,7 +31,7 @@ namespace MovieHub.Controllers
             }
             else
             {
-                searchString = currentFilter;
+                searchString = currentSearch;
             }
             ViewData["CurrentFilter"] = searchString;
             var movies = from s in _context.Film
@@ -47,10 +47,10 @@ namespace MovieHub.Controllers
                     movies = movies.OrderByDescending(m => m.Naziv);
                     break;
                 case "Date":
-                   // movies = movies.OrderBy(m => m.D);
+                    movies = movies.OrderBy(m => m.DatumIzlaska);
                     break;
                 case "date_desc":
-                   // movies = movies.OrderByDescending(s => s.EnrollmentDate);
+                    movies = movies.OrderByDescending(m => m.DatumIzlaska);
                     break;
                 default:
                     movies = movies.OrderBy(m => m.Naziv);
@@ -108,12 +108,30 @@ namespace MovieHub.Controllers
                 return NotFound();
             }
 
-            var film = await _context.Film.FindAsync(id);
+            var film = await _context.Film.Include(f => f.FilmZanr).ThenInclude(f => f.Zanr).
+                AsNoTracking().FirstOrDefaultAsync(f => f.FilmID == id);
             if (film == null)
             {
                 return NotFound();
             }
+            PopuniZanrove(film);
             return View(film);
+        }
+        private void PopuniZanrove(Film film)
+        {
+            var sviZanrovi = _context.Zanr;
+            var filmZanr = new HashSet<int>(film.FilmZanr.Select(z => z.ZanrId));
+            var viewModel = new List<FilmZanrData>();
+            foreach (var zanr in sviZanrovi)
+            {
+                viewModel.Add(new FilmZanrData
+                {
+                    ZanrID = zanr.ZanrID,
+                    Naziv = zanr.Naziv,
+                    Dodijeljen = filmZanr.Contains(zanr.ZanrID)
+                });
+            }
+            ViewData["Zanrovi"] = viewModel;
         }
 
         // POST: Film/Edit/5
@@ -121,34 +139,101 @@ namespace MovieHub.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Naziv,Ocjena,Trailer,Opis,Reziser,Poster,DatumIzlaska")] Film film)
+        public async Task<IActionResult> Edit(int id, string[] odabraniZanrovi)
         {
-            if (id != film.FilmID)
+            /*  [Bind("Naziv,Ocjena,Trailer,Opis,Reziser,Poster,DatumIzlaska")] Film film
+              if (id != film.FilmID)
+              {
+                  return NotFound();
+              }
+
+              if (ModelState.IsValid)
+              {
+                  try
+                  {
+                      _context.Update(film);
+                      await _context.SaveChangesAsync();
+                  }
+                  catch (DbUpdateConcurrencyException)
+                  {
+                      if (!FilmExists(film.FilmID))
+                      {
+                          return NotFound();
+                      }
+                      else
+                      {
+                          throw;
+                      }
+                  }
+                  return RedirectToAction(nameof(Index));
+              }
+              return View(film);
+            */
+            if (id == null)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            var filmToUpdate = await _context.Film
+                .Include(f => f.FilmZanr)
+                .ThenInclude(f => f.Zanr)
+                .FirstOrDefaultAsync(f => f.FilmID == id);
+
+            if (await TryUpdateModelAsync<Film>(
+                filmToUpdate,
+                "",
+                f => f.Naziv, f => f.Ocjena, f => f.Trailer, f => f.Opis, f => f.Reziser, f => f.Poster, f => f.DatumIzlaska))
             {
+               
+                UpdateFilmZanr(odabraniZanrovi, filmToUpdate);
                 try
                 {
-                    _context.Update(film);
                     await _context.SaveChangesAsync();
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (DbUpdateException /* ex */)
                 {
-                    if (!FilmExists(film.FilmID))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    //Log the error (uncomment ex variable name and write a log.)
+                    ModelState.AddModelError("", "Unable to save changes. " +
+                        "Try again, and if the problem persists, " +
+                        "see your system administrator.");
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(film);
+            UpdateFilmZanr(odabraniZanrovi, filmToUpdate);
+            PopuniZanrove(filmToUpdate);
+            return View(filmToUpdate);
+        }
+
+        private void UpdateFilmZanr(string[] odabraniZanrovi, Film filmToUpdate)
+        {
+            if (odabraniZanrovi == null)
+            {
+                filmToUpdate.FilmZanr = new List<FilmZanr>();
+                return;
+            }
+
+            var odabraniZanroviHS = new HashSet<string>(odabraniZanrovi);
+            var filmCourses = new HashSet<int>
+                (filmToUpdate.FilmZanr.Select(f => f.ZanrId ));
+            foreach (var zanr in _context.Zanr)
+            {
+                if (odabraniZanroviHS.Contains(zanr.ZanrID.ToString()))
+                {
+                    if (!filmCourses.Contains(zanr.ZanrID))
+                    {
+                        filmToUpdate.FilmZanr.Add(new FilmZanr { FilmID = filmToUpdate.FilmID, ZanrId = zanr.ZanrID });
+                    }
+                }
+                else
+                {
+
+                    if (filmCourses.Contains(zanr.ZanrID))
+                    {
+                        FilmZanr courseToRemove = filmToUpdate.FilmZanr.FirstOrDefault(i => i.ZanrId == zanr.ZanrID);
+                        _context.Remove(courseToRemove);
+                    }
+                }
+            }
         }
 
         // GET: Film/Delete/5
