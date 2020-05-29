@@ -2,11 +2,12 @@
 
 @{
     ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutClean.cshtml";
 }
 
-<h1>Create</h1>
+<h1>Nova watchlista</h1>
 
-<h4>Watchlist</h4>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -17,6 +18,9 @@
                 <input asp-for="Naziv" class="form-control" />
                 <span asp-validation-for="Naziv" class="text-danger"></span>
             </div>
+            <label>Odaberi filmove</label>
+            <br />       
+                @Html.DropDownList("FilmID", (MultiSelectList)ViewBag.Filmovi, new { id = "md", multiple = "multiple" })            
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -25,9 +29,14 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Nazad</a>
 </div>
 
 @section Scripts {
+    <script>
+        $(function () {
+            $("#md").chosen({ width: "100%" });
+        });
+    </script>
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

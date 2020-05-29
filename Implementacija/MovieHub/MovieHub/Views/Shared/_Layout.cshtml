@@ -28,7 +28,7 @@
     <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-touch-icon-144x144.png">
-
+    <link href="~/chosen/chosen.min.css" rel="stylesheet" />
 
 
 </head>
@@ -41,7 +41,7 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-               
+
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
@@ -51,12 +51,12 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Film" asp-action="Index">Filmovi</a>
                         </li>
-                         @if (User.Identity.IsAuthenticated)
-                         {
+                        @if (User.Identity.IsAuthenticated)
+                        {
                             <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Film" asp-action="Index"> Watchlist </a>
+                                <a class="nav-link text-light" asp-area="" asp-controller="Watchlist" asp-action="Index"> Watchlist </a>
                             </li>
-                          }
+                        }
                     </ul>
                     <form class="form-inline" asp-controller="Film" asp-action="Index" method="get">
                         <input class="form-control mr-sm-3" type="search" placeholder="Traži" value="@ViewData["currentFilter"]" name="SearchString" aria-label="Search">
@@ -66,25 +66,27 @@
             </div>
         </nav>
     </header>
-    
+
     <div class="container">
         <main role="main">
             @RenderBody()
         </main>
     </div>
-    
-    
-    
+
+
+
 
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2020 - MovieHub - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <!--<script src="~/lib/jquery/dist/jquery.min.js"></script>-->
+    <script src="~/js/chosen.jquery.min.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

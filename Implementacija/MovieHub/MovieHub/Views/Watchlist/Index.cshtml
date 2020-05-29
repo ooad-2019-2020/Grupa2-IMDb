@@ -1,22 +1,20 @@
 ﻿@model IEnumerable<MovieHub.Models.Watchlist>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Moje watchliste";
+    Layout = "~/Views/Shared/_LayoutClean.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Moje watchliste</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <button asp-action="Create">Kreiraj novu</button>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Naziv)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UserID)
             </th>
             <th></th>
         </tr>
@@ -28,12 +26,9 @@
                 @Html.DisplayFor(modelItem => item.Naziv)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.UserID)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.WatchlistID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.WatchlistID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.WatchlistID">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.WatchlistID">Uredi</a> |
+                <a asp-action="Details" asp-route-id="@item.WatchlistID">Detalji</a> |
+                <a asp-action="Delete" asp-route-id="@item.WatchlistID">Izbriši</a>
             </td>
         </tr>
 }

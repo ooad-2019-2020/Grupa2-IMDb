@@ -1,7 +1,8 @@
 ﻿@model MovieHub.Models.Watchlist
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Uredi";
+    Layout = "~/Views/Shared/_LayoutClean.cshtml";
 }
 
 <h1>Edit</h1>
@@ -23,6 +24,10 @@
                 <input asp-for="UserID" class="form-control" />
                 <span asp-validation-for="UserID" class="text-danger"></span>
             </div>
+            <label>Odaberi filmove</label>
+            <br />
+            @Html.DropDownList("FilmID", (MultiSelectList)ViewBag.Filmovi, new { id = "md", multiple = "multiple" })
+            <br />
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
@@ -35,5 +40,10 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+        <script>
+        $(function () {
+            $("#md").chosen({ width: "100%" });
+        });
+        </script>
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

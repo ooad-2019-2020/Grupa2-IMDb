@@ -64,6 +64,7 @@ namespace MovieHub.Controllers
         // GET: Watchlist/Create
         public IActionResult Create()
         {
+            ViewData["Filmovi"] = new MultiSelectList(_context.Film, "FilmID", "Naziv");
             return View();
         }
 
@@ -72,12 +73,21 @@ namespace MovieHub.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("WatchlistID,Naziv")] Watchlist watchlist)
+        public async Task<IActionResult> Create([Bind("WatchlistID,Naziv")] Watchlist watchlist, int[] FilmID)
         {
             if (ModelState.IsValid)
             {
                 var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                watchlist.UserID = userId; 
+                watchlist.UserID = userId;
+                var filmovi = _context.Film.Where(f => FilmID.Contains(f.FilmID)).ToList();
+                if (watchlist.Filmovi == null) watchlist.Filmovi = new List<WatchlistFilm>();
+                foreach (var film in filmovi)
+                {
+                    WatchlistFilm wf = new WatchlistFilm();
+                    wf.Watchlist = watchlist;
+                    wf.Film = film;
+                    watchlist.Filmovi.Add(wf);
+                }
                 _context.Add(watchlist);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -92,8 +102,10 @@ namespace MovieHub.Controllers
             {
                 return NotFound();
             }
-
             var watchlist = await _context.Watchlist.FindAsync(id);
+            List<Film> selektovani = dajSelektovane(watchlist); 
+            ViewData["Filmovi"] = new MultiSelectList(_context.Film, "FilmID", "Naziv", selektovani, "Naziv" );
+
             if (watchlist == null)
             {
                 return NotFound();
@@ -101,12 +113,33 @@ namespace MovieHub.Controllers
             return View(watchlist);
         }
 
+        private List<Film> dajSelektovane(Watchlist watchlist)
+        {
+            List<Film> selektovani = new List<Film>();
+            if (watchlist.Filmovi == null) return null;
+            foreach (var v in watchlist.Filmovi)
+            {
+                selektovani.Add((Film)_context.Film.Where(f => f.FilmID == v.FilmId));
+            }
+            return selektovani;
+        }
+
+        private HashSet<int> dajSelektovaneId(Watchlist watchlist)
+        {
+            HashSet<int> selektovani = new HashSet<int>();
+            foreach (var v in watchlist.Filmovi)
+            {
+                selektovani.Add(v.FilmId);
+            }
+            return selektovani;
+        }
+
         // POST: Watchlist/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("WatchlistID,Naziv,UserID")] Watchlist watchlist)
+        public async Task<IActionResult> Edit(int id, [Bind("WatchlistID,Naziv,UserID")] Watchlist watchlist, int[] FilmID)
         {
             if (id != watchlist.WatchlistID)
             {
@@ -117,6 +150,7 @@ namespace MovieHub.Controllers
             {
                 try
                 {
+                    UpdateWatchlistFilm(FilmID, watchlist);
                     _context.Update(watchlist);
                     await _context.SaveChangesAsync();
                 }
@@ -133,7 +167,46 @@ namespace MovieHub.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            List<Film> selektovani = dajSelektovane(watchlist);
+            ViewData["Filmovi"] = new MultiSelectList(_context.Film, "FilmID", "Naziv", selektovani, "FilmID");
             return View(watchlist);
+        }
+        // monster by mirzoroza v2
+        private void UpdateWatchlistFilm(int[] odabraniFilmovi, Watchlist watchlistToUpdate)
+        {
+            if (odabraniFilmovi == null)
+            {
+                watchlistToUpdate.Filmovi = new List<WatchlistFilm>();
+                return;
+            }
+
+            var odabraniFilmoviHS = new HashSet<int>(odabraniFilmovi);
+            var p = watchlistToUpdate.Filmovi.Select(f => f.FilmId);
+            HashSet<int> prethodniSelekt;
+            if (p != null)
+                prethodniSelekt = new HashSet<int>(p);
+            else
+                prethodniSelekt = new HashSet<int>();
+            foreach (var film in _context.Film)
+            {
+                if (odabraniFilmoviHS.Contains(film.FilmID))
+                {
+                    if (!prethodniSelekt.Contains(film.FilmID))
+                    {
+                        watchlistToUpdate.Filmovi.Add(new WatchlistFilm { WatchlistID = watchlistToUpdate.WatchlistID, 
+                                                                            FilmId = film.FilmID });
+                    }
+                }
+                else
+                {
+
+                    if (prethodniSelekt.Contains(film.FilmID))
+                    {
+                        WatchlistFilm wf = watchlistToUpdate.Filmovi.FirstOrDefault(f => f.FilmId == film.FilmID);
+                        _context.Remove(wf);
+                    }
+                }
+            }
         }
 
         // GET: Watchlist/Delete/5
