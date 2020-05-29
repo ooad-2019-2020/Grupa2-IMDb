@@ -22,11 +22,17 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Početna</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Film" asp-action="Index">Filmovi</a>
                         </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="Film" asp-action="Index"> Watchlist </a>
+                            </li>
+                        }
                     </ul>
                     <form class="form-inline" asp-controller="Film" asp-action="Index" method="get">
                         <input class="form-control mr-sm-3" type="search" placeholder="Traži" value="@ViewData["currentFilter"]" name="SearchString" aria-label="Search">

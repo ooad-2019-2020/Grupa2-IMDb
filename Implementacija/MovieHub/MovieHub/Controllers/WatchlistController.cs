@@ -6,22 +6,32 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MovieHub.Models;
+using System.Security.Claims;
 
 namespace MovieHub.Controllers
 {
+
+    [Microsoft.AspNetCore.Authorization.Authorize]
     public class WatchlistController : Controller
     {
         private readonly MovieDBContext _context;
+        private readonly Microsoft.AspNetCore.Identity.UserManager<RegistrovaniKorisnik> _userManager;
 
-        public WatchlistController(MovieDBContext context)
+        public WatchlistController(MovieDBContext context, Microsoft.AspNetCore.Identity.UserManager<RegistrovaniKorisnik> userManager )
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: Watchlist
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Watchlist.ToListAsync());
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            // var watchlist = await _context.Watchlist.ToListAsync();
+            var watchlist = from w in _context.Watchlist select w;
+            watchlist = watchlist.Where(w => w.UserID == userId);
+            
+            return View(await watchlist.AsNoTracking().ToListAsync());
         }
 
         // GET: Watchlist/Details/5
@@ -62,10 +72,12 @@ namespace MovieHub.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("WatchlistID,Naziv,UserID")] Watchlist watchlist)
+        public async Task<IActionResult> Create([Bind("WatchlistID,Naziv")] Watchlist watchlist)
         {
             if (ModelState.IsValid)
             {
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                watchlist.UserID = userId; 
                 _context.Add(watchlist);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
