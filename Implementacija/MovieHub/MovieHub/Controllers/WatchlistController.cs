@@ -102,9 +102,12 @@ namespace MovieHub.Controllers
             {
                 return NotFound();
             }
-            var watchlist = await _context.Watchlist.FindAsync(id);
-            List<Film> selektovani = dajSelektovane(watchlist); 
-            ViewData["Filmovi"] = new MultiSelectList(_context.Film, "FilmID", "Naziv", selektovani, "Naziv" );
+            var watchlist = await _context.Watchlist
+                  .Include(w => w.Filmovi)
+                  .ThenInclude(w => w.Film)
+                  .FirstOrDefaultAsync(w => w.WatchlistID == id);
+            var selektovani = dajSelektovaneId(watchlist);
+            ViewBag.Filmovi = new MultiSelectList(_context.Film, "FilmID", "Naziv", selektovani);
 
             if (watchlist == null)
             {
@@ -113,20 +116,11 @@ namespace MovieHub.Controllers
             return View(watchlist);
         }
 
-        private List<Film> dajSelektovane(Watchlist watchlist)
-        {
-            List<Film> selektovani = new List<Film>();
-            if (watchlist.Filmovi == null) return null;
-            foreach (var v in watchlist.Filmovi)
-            {
-                selektovani.Add((Film)_context.Film.Where(f => f.FilmID == v.FilmId));
-            }
-            return selektovani;
-        }
+        
 
-        private HashSet<int> dajSelektovaneId(Watchlist watchlist)
+        private List<int> dajSelektovaneId(Watchlist watchlist)
         {
-            HashSet<int> selektovani = new HashSet<int>();
+            List<int> selektovani = new List<int>();
             foreach (var v in watchlist.Filmovi)
             {
                 selektovani.Add(v.FilmId);
@@ -145,13 +139,18 @@ namespace MovieHub.Controllers
             {
                 return NotFound();
             }
+            var watchlistToUpdate = await _context.Watchlist
+                  .Include(w => w.Filmovi)
+                  .ThenInclude(w => w.Film)
+                  .FirstOrDefaultAsync(w => w.WatchlistID == id);
 
             if (ModelState.IsValid)
             {
                 try
                 {
-                    UpdateWatchlistFilm(FilmID, watchlist);
-                    _context.Update(watchlist);
+                   
+                    UpdateWatchlistFilm(FilmID, watchlistToUpdate);
+                    _context.Update(watchlistToUpdate);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -167,9 +166,11 @@ namespace MovieHub.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            List<Film> selektovani = dajSelektovane(watchlist);
-            ViewData["Filmovi"] = new MultiSelectList(_context.Film, "FilmID", "Naziv", selektovani, "FilmID");
-            return View(watchlist);
+            var selektovani = dajSelektovaneId(watchlist);
+            ViewBag.Filmovi = new MultiSelectList(_context.Film, "FilmID", "Naziv", selektovani);
+
+            ViewBag.Filmovi = new MultiSelectList(_context.Film, "FilmID", "Naziv", selektovani);
+            return View(watchlistToUpdate);
         }
         // monster by mirzoroza v2
         private void UpdateWatchlistFilm(int[] odabraniFilmovi, Watchlist watchlistToUpdate)
