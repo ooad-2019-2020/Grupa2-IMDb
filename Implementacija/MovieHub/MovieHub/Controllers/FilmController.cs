@@ -81,6 +81,7 @@ namespace MovieHub.Controllers
         // GET: Film/Create
         public IActionResult Create()
         {
+            ViewBag.Zanrovi =  new MultiSelectList(_context.Zanr, "ZanrID", "Naziv");
             return View();
         }
 
@@ -89,10 +90,17 @@ namespace MovieHub.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Naziv,Ocjena,Trailer,Opis,Reziser,Poster,DatumIzlaska")] Film film)
+        public async Task<IActionResult> Create([Bind("Naziv,Ocjena,Trailer,Opis,Reziser,Poster,DatumIzlaska")] Film film, int[] ZanrID)
         {
             if (ModelState.IsValid)
             {
+                var zanrovi = _context.Zanr.Where(z => ZanrID.Contains(z.ZanrID)).ToList();
+                if (film.FilmZanr == null) film.FilmZanr = new List<FilmZanr>();
+                foreach (var zanr in zanrovi)
+                {
+                    FilmZanr filmZanr = new FilmZanr() { FilmID = film.FilmID, ZanrId = zanr.ZanrID };
+                    film.FilmZanr.Add(filmZanr);
+                }
                 _context.Add(film);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

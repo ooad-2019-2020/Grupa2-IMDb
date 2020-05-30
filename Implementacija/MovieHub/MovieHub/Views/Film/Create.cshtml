@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutClean.cshtml";
 }
 
 <h1>Create</h1>
@@ -43,15 +44,13 @@
                 <span asp-validation-for="Poster" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Poster" class="control-label"></label>
-                <input asp-for="Poster" class="form-control" />
-                <span asp-validation-for="Poster" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="DatumIzlaska" class="control-label"></label>
                 <input asp-for="DatumIzlaska" class="form-control" />
                 <span asp-validation-for="DatumIzlaska" class="text-danger"></span>
             </div>
+            <label>Odaberi filmove</label>
+            <br />
+            @Html.DropDownList("ZanrID", (MultiSelectList)ViewBag.Zanrovi, new { id = "md", multiple = "multiple" })
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -64,5 +63,10 @@
 </div>
 
 @section Scripts {
+    <script>
+        $(function () {
+            $("#md").chosen({ width: "100%" });
+        });
+    </script>
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
