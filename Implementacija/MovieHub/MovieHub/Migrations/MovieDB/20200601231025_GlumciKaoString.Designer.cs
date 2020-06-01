@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MovieHub.Models;
 
 namespace MovieHub.Migrations.MovieDB
 {
     [DbContext(typeof(MovieDBContext))]
-    partial class MovieDBContextModelSnapshot : ModelSnapshot
+    [Migration("20200601231025_GlumciKaoString")]
+    partial class GlumciKaoString
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,7 +31,7 @@ namespace MovieHub.Migrations.MovieDB
                     b.Property<DateTime>("DatumIzlaska")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Glumci")
+                    b.Property<string>("Glumnci")
                         .HasColumnType("nvarchar(200)")
                         .HasMaxLength(200);
 

@@ -9,6 +9,7 @@ namespace MovieHub.Models
 {
     public class MovieDBContext : DbContext
     {
+        // connection string DESKTOP-G5MUTD1 miki
         public MovieDBContext(DbContextOptions<MovieDBContext> options) : base(options)
         {
         }

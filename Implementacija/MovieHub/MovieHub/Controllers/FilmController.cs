@@ -90,7 +90,7 @@ namespace MovieHub.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Naziv,Ocjena,Trailer,Opis,Reziser,Poster,DatumIzlaska")] Film film, int[] ZanrID)
+        public async Task<IActionResult> Create([Bind("Naziv,Ocjena,Trailer,Opis,Reziser,Poster,DatumIzlaska,Glumci")] Film film, int[] ZanrID)
         {
             if (ModelState.IsValid)
             {
@@ -190,7 +190,7 @@ namespace MovieHub.Controllers
             if (await TryUpdateModelAsync<Film>(
                 filmToUpdate,
                 "",
-                f => f.Naziv, f => f.Ocjena, f => f.Trailer, f => f.Opis, f => f.Reziser, f => f.Poster, f => f.DatumIzlaska))
+                f => f.Naziv, f => f.Ocjena, f => f.Trailer, f => f.Opis, f => f.Reziser, f => f.Poster, f => f.DatumIzlaska, f => f.Glumci))
             {
                
                 UpdateFilmZanr(odabraniZanrovi, filmToUpdate);

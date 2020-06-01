@@ -26,10 +26,10 @@ namespace MovieHub.Models
         [Display(Name = "Datum izlaska")]
         [DataType(DataType.Date)]
         public DateTime DatumIzlaska { get; set; }
+        [StringLength(200)]
+        public string Glumci { get; set; }
         public virtual ICollection<FilmZanr> FilmZanr { get; set; }
         public virtual ICollection<WatchlistFilm> WatchlistFilm { get; set; }
-
-        public virtual ICollection<FilmGlumac> FilmGlumac { get; set; }
 
         public virtual ICollection<OmiljeniFilmovi> OmiljeniFilmovi { get; set; }
 
