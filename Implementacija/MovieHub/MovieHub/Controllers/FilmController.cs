@@ -68,7 +68,7 @@ namespace MovieHub.Controllers
                 return NotFound();
             }
 
-            var film = await _context.Film
+            var film = await _context.Film.Include(f => f.FilmZanr).ThenInclude(f => f.Zanr)
                 .FirstOrDefaultAsync(m => m.FilmID == id);
             if (film == null)
             {

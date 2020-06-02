@@ -84,16 +84,18 @@
 
                                         <ul class="card__list">
                                             <li>HD</li>
-                                            <li>16+</li>
                                         </ul>
                                     </div>
 
                                     <ul class="card__meta">
                                         <li>
-                                            <span>Genre:</span> <a href="#">Action</a>
-                                            <a href="#">Triler</a>
+                                            <span>Žanr:</span>
+                                            @foreach (var zanr in Model.FilmZanr)
+                                            {
+                                                <a href="#">@zanr.Zanr.Naziv</a>
+                                            }
                                         </li>
-                                        <li><span>Release year:</span> 2017</li>
+                                        <li><span>Godina izlasla:</span> @Model.DatumIzlaska.Year.ToString()</li>
                                         <li><span>Running time:</span> 120 min</li>
                                         <li><span>Country:</span> <a href="#">USA</a> </li>
                                     </ul>

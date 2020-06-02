@@ -24,7 +24,7 @@ namespace MovieHub.Controllers
         public async Task<IActionResult> Index()
         {
 
-            return View(await _context.Film.ToListAsync());
+            return View(await _context.Film.Include(f => f.FilmZanr).ThenInclude(f => f.Zanr).ToListAsync());
         }
 
         public IActionResult Privacy()
