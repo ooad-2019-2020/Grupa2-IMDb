@@ -8957,19 +8957,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Robert\\.nuget\\packages\\": {}
+    "C:\\Users\\PC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Robert\\Desktop\\OOAD\\Grupa2-IMDb\\Implementacija\\MovieHub\\MovieHub\\MovieHub.csproj",
+      "projectUniqueName": "C:\\Users\\PC\\Desktop\\ETF\\OOAD\\Projekat\\Grupa2-IMDb\\Implementacija\\MovieHub\\MovieHub\\MovieHub.csproj",
       "projectName": "MovieHub",
-      "projectPath": "C:\\Users\\Robert\\Desktop\\OOAD\\Grupa2-IMDb\\Implementacija\\MovieHub\\MovieHub\\MovieHub.csproj",
-      "packagesPath": "C:\\Users\\Robert\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Robert\\Desktop\\OOAD\\Grupa2-IMDb\\Implementacija\\MovieHub\\MovieHub\\obj\\",
+      "projectPath": "C:\\Users\\PC\\Desktop\\ETF\\OOAD\\Projekat\\Grupa2-IMDb\\Implementacija\\MovieHub\\MovieHub\\MovieHub.csproj",
+      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\PC\\Desktop\\ETF\\OOAD\\Projekat\\Grupa2-IMDb\\Implementacija\\MovieHub\\MovieHub\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Robert\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
