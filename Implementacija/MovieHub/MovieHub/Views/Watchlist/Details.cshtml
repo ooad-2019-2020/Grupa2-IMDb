@@ -2,51 +2,80 @@
 
 @{
     ViewData["Title"] = "Details";
-    Layout = "~/Views/Shared/_LayoutClean.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>@Html.DisplayFor(model => model.Naziv)</h1>
+<h1>Naziv: @Html.DisplayFor(model => model.Naziv)</h1>
+<body class="body">
+    <section class="home">
+        <!-- home bg -->
+        <div class="owl-carousel home__bg">
+            <div class="item home__cover" data-bg="/img/home/home__bg.jpg"></div>
+            <div class="item home__cover" data-bg="/img/home/home__bg2.jpg"></div>
+            <div class="item home__cover" data-bg="/img/home/home__bg3.jpg"></div>
+            <div class="item home__cover" data-bg="/img/home/home__bg4.jpg"></div>
+        </div>
+        <!-- end home bg -->
 
-<div>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Naziv)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Naziv)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.UserID)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.UserID)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Filmovi)
-        </dt>
-        <dd class="col-sm-10">
-            <table class="table">
-                <tr>
-                    <th>Film</th>
-                    <th>Grade</th>
-                </tr>
+        <div class="container">
+            <div class="row">
+                <!-- card -->
                 @foreach (var item in Model.Filmovi)
                 {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Film.Naziv)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Film.Ocjena)
-                        </td>
-                    </tr>
+                    <div class="col-6 col-sm-12 col-lg-6">
+                        <div class="card card--list">
+                            <div class="row">
+                                <div class="col-12 col-sm-4">
+                                    <div class="card__cover">
+                                        <img src=img/covers/cover.jpg alt="">
+                                        <a asp-action="Details" asp-route-id="@item.Film.FilmID" class="card__play">
+                                            <i class="icon ion-ios-play"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-8">
+                                    <div class="card__content">
+                                        <h3 class="card__title"><a asp-action="Details" asp-route-id="@item.Film.FilmID">@Html.DisplayFor(modelItem => item.Film.Naziv)</a></h3>
+                                        <span class="card__category">
+                                            <a href="#">Action</a>
+                                            <a href="#">Triler</a>
+                                        </span>
+
+                                        <div class="card__wrap">
+                                            <span class="card__rate"><i class="icon ion-ios-star"></i>>@Html.DisplayFor(modelItem => item.Film.Ocjena)</span>
+
+
+                                        </div>
+
+                                        <div class="card__description">
+                                            <p>@Html.DisplayFor(modelItem => item.Film.Opis)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 }
-            </table>
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.WatchlistID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+            </div>
+        </div>
+    </section>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.WatchlistID">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.min.js"></script>
+    <script src="js/wNumb.js"></script>
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/plyr.min.js"></script>
+    <script src="js/jquery.morelines.min.js"></script>
+    <script src="js/photoswipe.min.js"></script>
+    <script src="js/photoswipe-ui-default.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
