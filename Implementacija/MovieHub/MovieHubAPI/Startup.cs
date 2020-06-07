@@ -26,7 +26,7 @@ namespace MovieHubAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<moviedbContext>(options => options.UseSqlServer("Server=DESKTOP-AAU2QSM\\SQLEXPRESS;Database=moviedb;Trusted_Connection=True;"));
+            services.AddDbContext<moviedbContext>(options => options.UseSqlServer("Server=DESKTOP-G5MUTD1\\SQLEXPRESS;Database=moviedb;Trusted_Connection=True;"));
             services.AddControllers();
         }
 

@@ -37,6 +37,7 @@ namespace MovieHub
 
 
             services.AddDefaultIdentity<RegistrovaniKorisnik>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             
            
@@ -50,7 +51,7 @@ namespace MovieHub
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, MovieDBContext context)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, MovieDBContext context, ApplicationDbContext appContext, UserManager<RegistrovaniKorisnik> userManager, RoleManager<IdentityRole> roleManager)
         {
             if (env.IsDevelopment())
             {
@@ -71,6 +72,7 @@ namespace MovieHub
             app.UseAuthentication();
             app.UseAuthorization();
 
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -78,8 +80,9 @@ namespace MovieHub
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
-
+            MyIdentityDataInitializer.SeedData(userManager, roleManager, appContext);
             MovieDBSeed.Napuni(context);
+
         }
     }
 }
