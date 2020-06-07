@@ -54,8 +54,8 @@ namespace MovieHub.Controllers
         .FirstOrDefaultAsync(w => w.WatchlistID == id);
 
 
-
-            if (watchlist == null)
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (watchlist == null || watchlist.UserID != userId)
             {
                 return NotFound();
             }
@@ -110,8 +110,8 @@ namespace MovieHub.Controllers
                   .FirstOrDefaultAsync(w => w.WatchlistID == id);
             var selektovani = dajSelektovaneId(watchlist);
             ViewBag.Filmovi = new MultiSelectList(_context.Film, "FilmID", "Naziv", selektovani);
-
-            if (watchlist == null)
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (watchlist == null || watchlist.UserID != userId)
             {
                 return NotFound();
             }
@@ -168,6 +168,8 @@ namespace MovieHub.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (watchlistToUpdate.UserID != userId) return NotFound();
             var selektovani = dajSelektovaneId(watchlist);
             ViewBag.Filmovi = new MultiSelectList(_context.Film, "FilmID", "Naziv", selektovani);
 
@@ -222,7 +224,8 @@ namespace MovieHub.Controllers
 
             var watchlist = await _context.Watchlist
                 .FirstOrDefaultAsync(m => m.WatchlistID == id);
-            if (watchlist == null)
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (watchlist == null || watchlist.UserID != userId)
             {
                 return NotFound();
             }

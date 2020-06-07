@@ -9,6 +9,7 @@ using MovieHub.Models;
 
 namespace MovieHub.Controllers
 {
+    [Microsoft.AspNetCore.Authorization.Authorize(Roles = "Administrator")]
     public class ZanrController : Controller
     {
         private readonly MovieDBContext _context;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -79,6 +80,7 @@ namespace MovieHub.Controllers
         }
 
         // GET: Film/Create
+        [Authorize(Roles = "Administrator")]
         public IActionResult Create()
         {
             ViewBag.Zanrovi =  new MultiSelectList(_context.Zanr, "ZanrID", "Naziv");
@@ -88,6 +90,7 @@ namespace MovieHub.Controllers
         // POST: Film/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Administrator")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Naziv,Ocjena,Trailer,Opis,Reziser,Poster,DatumIzlaska,Glumci,Popularan")] Film film, int[] ZanrID)
@@ -107,7 +110,7 @@ namespace MovieHub.Controllers
             }
             return View(film);
         }
-
+        [Authorize(Roles = "Administrator")]
         // GET: Film/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -147,6 +150,7 @@ namespace MovieHub.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Edit(int id, string[] odabraniZanrovi)
         {
             /*  [Bind("Naziv,Ocjena,Trailer,Opis,Reziser,Poster,DatumIzlaska")] Film film
@@ -245,6 +249,7 @@ namespace MovieHub.Controllers
         }
 
         // GET: Film/Delete/5
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -265,6 +270,7 @@ namespace MovieHub.Controllers
         // POST: Film/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var film = await _context.Film.FindAsync(id);
