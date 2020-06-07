@@ -48,6 +48,8 @@ namespace MovieHub.Controllers
             Watchlist watchlist = await _context.Watchlist
         .Include(w => w.Filmovi)
         .ThenInclude(f => f.Film)
+        .ThenInclude(f => f.FilmZanr)
+        .ThenInclude(f => f.Zanr)
         .AsNoTracking()
         .FirstOrDefaultAsync(w => w.WatchlistID == id);
 
