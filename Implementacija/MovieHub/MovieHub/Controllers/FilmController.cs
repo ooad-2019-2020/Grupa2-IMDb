@@ -71,6 +71,11 @@ namespace MovieHub.Controllers
 
             var film = await _context.Film.Include(f => f.FilmZanr).ThenInclude(f => f.Zanr)
                 .FirstOrDefaultAsync(m => m.FilmID == id);
+            ViewBag.popularni = new List<Film>(); 
+            List<Film> list = (await _context.Film.Where(f => f.Popularan == true).Include(f => f.FilmZanr).ThenInclude(f => f.Zanr).ToListAsync());
+            list.RemoveRange(6, list.Count - 6);
+            ViewBag.popularni = list;
+
             if (film == null)
             {
                 return NotFound();
