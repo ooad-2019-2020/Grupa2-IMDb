@@ -194,9 +194,6 @@ C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj
 C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\ResetPasswordConfirmation.cshtml.g.cs
 C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\_StatusMessage.cshtml.g.cs
 C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Error.cshtml.g.cs
-C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\MovieHub.csproj.CoreCompileInputs.cache
-C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\MovieHub.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\MovieHub.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\bin\Debug\netcoreapp3.1\Microsoft.Data.Sqlite.dll
 C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Sqlite.dll
@@ -721,3 +718,7 @@ C:\Users\Robert\Desktop\OOAD\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\De
 C:\Users\Robert\Desktop\OOAD\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\staticwebassets\MovieHub.StaticWebAssets.Manifest.cache
 C:\Users\Robert\Desktop\OOAD\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\staticwebassets\MovieHub.StaticWebAssets.xml
 C:\Users\Robert\Desktop\OOAD\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\MovieHub.genruntimeconfig.cache
+C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\MovieHub.csproj.CoreCompileInputs.cache
+C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\MovieHub.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\obj\Debug\netcoreapp3.1\MovieHub.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Mirza\Desktop\MovieHub\Grupa2-IMDb\Implementacija\MovieHub\MovieHub\bin\Debug\netcoreapp3.1\TMDbLib.dll

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hd45Ai5pXLtLjISEszp1zA8g3PQ+1SpurJ4rd0QbAQC7/z5a1uti5QduXSfG8vardxuMfi4oEdlXJNkAZp/TWw==",
+  "dgSpecHash": "UiMcuU6DJuK3pT2mZC2yeswzwQMoaQW7Fj9U3uKEMEh2gj4PM03Z6qM9SO6V8ZTrcuHClws3DBGuIzi9vHXQCg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mirza\\Desktop\\MovieHub\\Grupa2-IMDb\\Implementacija\\MovieHub\\MovieHub\\MovieHub.csproj",
   "expectedPackageFiles": [
@@ -176,6 +176,7 @@
     "C:\\Users\\Mirza\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Mirza\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Mirza\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\Mirza\\.nuget\\packages\\tmdblib\\1.6.0\\tmdblib.1.6.0.nupkg.sha512",
     "C:\\Users\\Mirza\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
   "logs": []
