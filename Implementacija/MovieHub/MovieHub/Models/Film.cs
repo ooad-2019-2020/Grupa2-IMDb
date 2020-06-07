@@ -33,6 +33,9 @@ namespace MovieHub.Models
 
         public virtual ICollection<OmiljeniFilmovi> OmiljeniFilmovi { get; set; }
 
+        [Display(Name = "Dodaj u listu popularnih")]
+        public Boolean Popularan { get; set; }
+
 
     }
 }

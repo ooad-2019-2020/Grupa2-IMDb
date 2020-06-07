@@ -16,7 +16,8 @@ namespace MovieHub.Migrations.MovieDB
                     Ocjena = table.Column<decimal>(type: "decimal(18,4)", nullable: false),
                     Trailer = table.Column<string>(maxLength: 100, nullable: true),
                     Opis = table.Column<string>(maxLength: 500, nullable: true),
-                    Reziser = table.Column<string>(maxLength: 50, nullable: true)
+                    Reziser = table.Column<string>(maxLength: 50, nullable: true),
+                    Popularan = table.Column<bool>(nullable: true)
                 },
                 constraints: table =>
                 {

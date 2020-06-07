@@ -56,6 +56,7 @@ namespace MovieHub.Models
                     }
                 }
                 film.Trailer = movie.Videos.Results.ElementAt(0).Site;
+                film.Popularan = true;
                 context.Add(film);
             }
             context.SaveChanges();

@@ -56,7 +56,7 @@ namespace MovieHub.Controllers
                     movies = movies.OrderBy(m => m.Naziv);
                     break;
             }
-            int pageSize = 9;
+            int pageSize = 20;
             return View(await PaginatedList<Film>.CreateAsync(movies.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
 
@@ -90,7 +90,7 @@ namespace MovieHub.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Naziv,Ocjena,Trailer,Opis,Reziser,Poster,DatumIzlaska,Glumci")] Film film, int[] ZanrID)
+        public async Task<IActionResult> Create([Bind("Naziv,Ocjena,Trailer,Opis,Reziser,Poster,DatumIzlaska,Glumci,Popularan")] Film film, int[] ZanrID)
         {
             if (ModelState.IsValid)
             {
