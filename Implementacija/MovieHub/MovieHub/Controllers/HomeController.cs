@@ -23,8 +23,10 @@ namespace MovieHub.Controllers
 
         public async Task<IActionResult> Index()
         {
-
-            return View(await _context.Film.Include(f => f.FilmZanr).ThenInclude(f => f.Zanr).ToListAsync());
+            HomeViewModel model = new HomeViewModel();
+            model.Popularni = await _context.Film.Where(film => film.Popularan == true).Include(f => f.FilmZanr).ThenInclude(f => f.Zanr).ToListAsync();
+            model.Filmovi = await _context.Film.Where(film => film.FilmID >= 50 && film.FilmID < 60).Include(f => f.FilmZanr).ThenInclude(f => f.Zanr).ToListAsync();
+            return View(model);
         }
 
         public IActionResult Privacy()

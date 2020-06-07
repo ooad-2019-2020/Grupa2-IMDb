@@ -23,6 +23,12 @@ namespace MovieHub.Models
             return movies;
         }
 
+        public SearchContainer<SearchMovie> dajNajboljeFilmove(int page)
+        {
+            SearchContainer<SearchMovie> movies = client.GetMovieTopRatedListAsync(null, page, null).Result;
+            return movies;
+        }
+
         public List<Zanr> dajZanrove()
         {
             List<Genre> genres = client.GetMovieGenresAsync().Result;
