@@ -4,52 +4,7 @@
     ViewData["Title"] = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<!--
 
-<h1>Details</h1>
-
-<div>
-    <h4>Film</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Naziv)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Naziv)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Ocjena)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Ocjena)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Trailer)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Trailer)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Opis)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Opis)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Reziser)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Reziser)
-        </dd>
-    </dl>
-</div>
-
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.FilmID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
-    !-- details -->
 <body class="body">
 
     <
@@ -96,8 +51,7 @@
                                             }
                                         </li>
                                         <li><span>Godina izlasla:</span> @Model.DatumIzlaska.Year.ToString()</li>
-                                        <li><span>Running time:</span> 120 min</li>
-                                        <li><span>Country:</span> <a href="#">USA</a> </li>
+                                        <li><a target="_blank" rel="noopener noreferrer" href="@Html.DisplayFor(model => model.Trailer) ">Trailer</a> </li>
                                     </ul>
 
                                     <div class="card__description card__description--details">
@@ -112,6 +66,8 @@
                 <!-- end content -->
                 <!-- player -->
                 <div class="col-12 col-xl-6">
+                    @if (User.Identity.IsAuthenticated)
+                    {
                     <video controls crossorigin playsinline  id="player">
                         <!-- Video files -->
                         <!--
@@ -120,7 +76,7 @@
                  <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
                     <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440">
                         -->
-                        <source src=@Html.DisplayFor(model => model.Trailer) type="video/mp4" size="720">
+                        <source src=https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4 type="video/mp4" size="720">
 
 
                         <!-- Caption files -->
@@ -131,7 +87,11 @@
                         <!-- Fallback for browsers that don't support the <video> element -->
                         <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
                     </video>
-                        <iframe src="https://www.youtube.com/watch?v=_XgQA9Ab0Gw"></iframe>
+                    }
+                    else
+                    {
+                        <h1>Registrujte se kako bi mogli gledati naš sadržaj!</h1>
+                    }
                 </div>
                 <!-- end player -->
 
